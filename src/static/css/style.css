@@ -1,0 +1,24 @@
+.navbar {
+    background-color: #659224 !important;
+}
+
+@font-face {
+    font-family: "Roboto";
+    src: url('https://www.dafont.com/fr/roboto.font');
+}
+
+body {
+    font-family: Roboto;
+    background-color: rgb(53, 53, 53);
+}
+
+.Back {
+    width: 3%;
+    height: auto;
+}
+
+.logo {
+    width: 6%;
+    height: auto;
+    border-radius: 30px;
+}
