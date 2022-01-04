@@ -8,10 +8,10 @@ import java.net.URLConnection;
 
 public class httpGet {
 
-    public static String httpGet( ) {
+    public static String httpGet(String url_request) {
         try {
             //Create connection
-            URL url = new URL("https://raw.githubusercontent.com/Bryan82370/MSPR_1_DATA/main/staff.txt");
+            URL url = new URL(url_request);
             URLConnection url_connection = url.openConnection();
             //Get Response
             BufferedReader rd = new BufferedReader(new InputStreamReader(url_connection.getInputStream()));
