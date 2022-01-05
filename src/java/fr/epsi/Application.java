@@ -17,7 +17,7 @@ public class Application {
     }
 
     private static String read_index_html(ArrayList<String> list) throws IOException {
-        BufferedReader rd = new BufferedReader(new FileReader("C:/Users/sabri/Dev/MSPR/src/html/template.html"));
+        BufferedReader rd = new BufferedReader(new FileReader("../../html/index.html"));
         String line;
         String index_html = "";
         while ((line = rd.readLine()) != null) {
@@ -36,7 +36,7 @@ public class Application {
     }
 
     private static void write_in_new_index_html(String new_index_html) throws IOException {
-        File file = new File("C:/Users/sabri/Dev/MSPR/src/html/new_index.html");
+        File file = new File("../../html/new_index.html");
         FileWriter fw = new FileWriter(file.getAbsoluteFile());
         BufferedWriter bw = new BufferedWriter(fw);
         bw.write(new_index_html);
