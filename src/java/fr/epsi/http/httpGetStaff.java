@@ -1,21 +1,16 @@
 package fr.epsi.http;
 
 import java.io.BufferedReader;
+import java.io.FileReader;
 import java.io.IOException;
-import java.io.InputStreamReader;
-import java.net.URL;
-import java.net.URLConnection;
 import java.util.ArrayList;
 
 public class httpGetStaff {
 
-    public static ArrayList<String> httpGetStaff(String url_request) {
+    public static ArrayList<String> httpGetStaff(String file_name) {
         try {
-            //Create connection
-            URL url = new URL(url_request);
-            URLConnection url_connection = url.openConnection();
             //Get Response
-            BufferedReader rd = new BufferedReader(new InputStreamReader(url_connection.getInputStream()));
+            BufferedReader rd = new BufferedReader(new FileReader("C:/Users/sabri/Dev/MSPR/src/data_client/all_txt/" + file_name));
             String line;
             //Read line by line
             ArrayList<String> list = new ArrayList<>();
