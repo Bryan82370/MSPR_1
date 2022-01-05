@@ -3,13 +3,55 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Test</title>
+    <title>Fiche Client</title>
     <link href="https://bootswatch.com/5/superhero/bootstrap.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"></script>
     <link href="../static/css/style.css" rel="stylesheet">
 </head>
 
 <body>
-    <img src="../static/img/back.jpg" class="Back">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container-fluid">
+            <img src="../static/img/logo.png" alt="logo" class="logo">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+            <div class="collapse navbar-collapse" id="navbarColor01">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link  nav2" href="index.html">Acceuil
+                            <span class="visually-hidden">(current)</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="">
+        <div class="col-sm-12 Name">
+            <h1>NOM Prénom</h1>
+        </div>
+        <div class="col-sm-12 imageProfil">
+            <img src="../static/img/logo.png" alt="imgProfil" class="imgProfil">
+        </div>
+        <div class="check">
+            <input type="checkbox" id="Equipement1" name="Equipement1" value="True">
+            <label for="Equipement1"> Mousqueton </label><br>
+            <input type="checkbox" id="Equipement2" name="Equipement2" value="True">
+            <label for="Equipement2"> Gant d'intervention</label><br>
+            <input type="checkbox" id="Equipement3" name="Equipement3" value="True">
+            <label for="Equipement3"> Ceinture de sécurité tactique</label><br>
+            <input type="checkbox" id="Equipement4" name="Equipement4" value="True">
+            <label for="Equipement4"> Détecteur de métaux</label><br>
+            <input type="checkbox" id="Equipement5" name="Equipement5" value="True">
+            <label for="Equipement5"> Brassard de sécurité</label><br>
+            <input type="checkbox" id="Equipement6" name="Equipement6" value="True">
+            <label for="Equipement6"> Lampe torche</label><br>
+            <input type="checkbox" id="Equipement7" name="Equipement7" value="True">
+            <label for="Equipement7"> Gilet pare balle</label><br>
+        </div>
+    </div>
 </body>
 
 </html>
