@@ -22,11 +22,32 @@ public class Application {
                     try {
                         user(list.get(finalI));
                     } catch (IOException e) {
-                        e.printStackTrace();
+                        try {
+                            user_error(list.get(finalI));
+                        } catch (IOException ex) {
+                            ex.printStackTrace();
+                        }
                     }
                 }
             }).start();
         }
+    }
+
+    private static void user_error(String user) throws IOException {
+        BufferedReader rd = new BufferedReader(new FileReader("C:/Users/sabri/Dev/MSPR/src/html/errorAgent.html"));
+        String line;
+        String error_html = "";
+        while ((line = rd.readLine()) != null) {
+            error_html += line;
+        }
+        rd.close();
+        System.out.println("ERROR" + error_html);
+
+        File file = new File("C:/Users/sabri/Dev/MSPR/src/html/new/" + user + ".html");
+        FileWriter fw = new FileWriter(file.getAbsoluteFile());
+        BufferedWriter bw = new BufferedWriter(fw);
+        bw.write(error_html);
+        bw.close();
     }
 
     private static void user(String user) throws IOException {
