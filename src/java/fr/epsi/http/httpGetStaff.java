@@ -7,9 +7,9 @@ import java.net.URL;
 import java.net.URLConnection;
 import java.util.ArrayList;
 
-public class httpGet {
+public class httpGetStaff {
 
-    public static ArrayList<String> httpGet(String url_request) {
+    public static ArrayList<String> httpGetStaff(String url_request) {
         try {
             //Create connection
             URL url = new URL(url_request);

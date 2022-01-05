@@ -1,6 +1,6 @@
 import org.junit.jupiter.api.*;
 
-import static fr.epsi.http.httpGet.httpGet;
+import static fr.epsi.http.httpGetStaff.httpGetStaff;
 
 public class ApplicationTest {
 
@@ -12,7 +12,7 @@ public class ApplicationTest {
             boolean error = false;
             try {
                 String url_staff = "https://raw.githubusercontent.com/Bryan82370/MSPR_1_DATA/man/staff.txt";
-                httpGet(url_staff);
+                httpGetStaff(url_staff);
             } catch (Exception e) {
                 e.printStackTrace();
                 error = true;
@@ -25,7 +25,7 @@ public class ApplicationTest {
             boolean error = false;
             try {
                 String url_staff = "https://raw.githubusercontent.com/Bryan82370/MSPR_1_DATA/main/staff.txt";
-                httpGet(url_staff);
+                httpGetStaff(url_staff);
                 error = true;
             } catch (Exception e) {
                 e.printStackTrace();
