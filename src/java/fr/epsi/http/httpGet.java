@@ -5,10 +5,11 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.URL;
 import java.net.URLConnection;
+import java.util.ArrayList;
 
 public class httpGet {
 
-    public static String httpGet(String url_request) {
+    public static ArrayList<String> httpGet(String url_request) {
         try {
             //Create connection
             URL url = new URL(url_request);
@@ -16,14 +17,13 @@ public class httpGet {
             //Get Response
             BufferedReader rd = new BufferedReader(new InputStreamReader(url_connection.getInputStream()));
             String line;
-            StringBuilder response = new StringBuilder();
             //Read line by line
+            ArrayList<String> list = new ArrayList<>();
             while ((line = rd.readLine()) != null) {
-                response.append(line);
-                System.out.println(line);
+                list.add(line);
             }
             rd.close();
-            return response.toString();
+            return list;
         } catch (IOException e) {
             e.printStackTrace();
             return null;
